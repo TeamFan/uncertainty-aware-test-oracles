@@ -1,0 +1,1091 @@
+{
+  "config": {
+    "seed": 20261028,
+    "n_train": 4000,
+    "n_fit": 3000,
+    "n_pool_s0": 6000,
+    "n_shift": 5000,
+    "n_cal": 2000,
+    "splits": 200,
+    "alphas": [
+      0.005,
+      0.01,
+      0.02
+    ],
+    "n_recal": 300,
+    "c_false_pass": 10.0,
+    "c_false_fail": 1.0,
+    "reps_flakiness": 20
+  },
+  "E1_error_detection": {
+    "S0": {
+      "fail_rate": 0.18,
+      "error_rate": 0.04766666666666667,
+      "false_pass_rate": 0.028,
+      "false_fail_rate": 0.019666666666666666,
+      "error_rate_single": 0.05483333333333333,
+      "error_rate_gb": 0.0505,
+      "ece": 0.01846909754835801,
+      "ece_isotonic": 0.008497233429537395,
+      "mean_mutual_info": 0.018812815553294508,
+      "mean_novelty": 2.061033940643272,
+      "signals": {
+        "confidence": {
+          "auroc": 0.9400423692513297,
+          "auroc_ci": [
+            0.9321657979999426,
+            0.9480218765119106
+          ],
+          "aurc": 0.004169095474178078
+        },
+        "mutual_info": {
+          "auroc": 0.9307259069247169,
+          "auroc_ci": [
+            0.9219148956560582,
+            0.9392725247249927
+          ],
+          "aurc": 0.004647834873794221
+        },
+        "disagreement": {
+          "auroc": 0.9209560128356068,
+          "auroc_ci": [
+            0.9103781018114109,
+            0.9309688559800043
+          ],
+          "aurc": 0.005230779125223718
+        },
+        "novelty": {
+          "auroc": 0.48994189219950507,
+          "auroc_ci": [
+            0.4550853883821814,
+            0.5278988902098605
+          ],
+          "aurc": 0.04865465794333168
+        },
+        "stacked": {
+          "auroc": 0.9390596278065652,
+          "auroc_ci": [
+            0.9314003909265797,
+            0.9466823034677386
+          ],
+          "aurc": 0.0042008932579623084
+        },
+        "one_minus_msp": {
+          "auroc": 0.9400423692513297,
+          "auroc_ci": [
+            NaN,
+            NaN
+          ],
+          "aurc": 0.004169095474178078
+        },
+        "gini": {
+          "auroc": 0.9400423692513297,
+          "auroc_ci": [
+            NaN,
+            NaN
+          ],
+          "aurc": 0.004169095474178078
+        },
+        "single": {
+          "auroc": 0.9362307779300542,
+          "aurc": 0.005214789132620973
+        }
+      }
+    },
+    "S1": {
+      "fail_rate": 0.2884,
+      "error_rate": 0.062,
+      "false_pass_rate": 0.044,
+      "false_fail_rate": 0.018,
+      "error_rate_single": 0.0606,
+      "error_rate_gb": 0.068,
+      "ece": 0.025101611985912924,
+      "ece_isotonic": 0.02807473299069713,
+      "mean_mutual_info": 0.03592241599285172,
+      "mean_novelty": 3.2413487397624916,
+      "signals": {
+        "confidence": {
+          "auroc": 0.9232767040374166,
+          "auroc_ci": [
+            0.9120601034477643,
+            0.934164933879851
+          ],
+          "aurc": 0.007201473608948273
+        },
+        "mutual_info": {
+          "auroc": 0.9100763463787056,
+          "auroc_ci": [
+            0.8981841540665279,
+            0.9215208189981744
+          ],
+          "aurc": 0.008097071569231973
+        },
+        "disagreement": {
+          "auroc": 0.8856771442327532,
+          "auroc_ci": [
+            0.8692527629862812,
+            0.8995951871838762
+          ],
+          "aurc": 0.010340244344975326
+        },
+        "novelty": {
+          "auroc": 0.5170555058807346,
+          "auroc_ci": [
+            0.4864397527601641,
+            0.5480140260249637
+          ],
+          "aurc": 0.05888006515996928
+        },
+        "stacked": {
+          "auroc": 0.9274757548662219,
+          "auroc_ci": [
+            0.9153790150709611,
+            0.9376638942996806
+          ],
+          "aurc": 0.00693837665362318
+        },
+        "one_minus_msp": {
+          "auroc": 0.9232767040374166,
+          "auroc_ci": [
+            NaN,
+            NaN
+          ],
+          "aurc": 0.007201473608948273
+        },
+        "gini": {
+          "auroc": 0.9232767040374166,
+          "auroc_ci": [
+            NaN,
+            NaN
+          ],
+          "aurc": 0.007201473608948273
+        },
+        "single": {
+          "auroc": 0.9174580221488191,
+          "aurc": 0.007356309557337902
+        }
+      }
+    },
+    "S2": {
+      "fail_rate": 0.2464,
+      "error_rate": 0.0832,
+      "false_pass_rate": 0.0782,
+      "false_fail_rate": 0.005,
+      "error_rate_single": 0.084,
+      "error_rate_gb": 0.0968,
+      "ece": 0.06958124929783863,
+      "ece_isotonic": 0.07152868918658456,
+      "mean_mutual_info": 0.01701117049233799,
+      "mean_novelty": 2.069597906838213,
+      "signals": {
+        "confidence": {
+          "auroc": 0.8939953139683179,
+          "auroc_ci": [
+            0.882093949195569,
+            0.9046285887227976
+          ],
+          "aurc": 0.013325403326116566
+        },
+        "mutual_info": {
+          "auroc": 0.8910791297489596,
+          "auroc_ci": [
+            0.8794735083079641,
+            0.9027393978909081
+          ],
+          "aurc": 0.0135889145338656
+        },
+        "disagreement": {
+          "auroc": 0.8621978411531749,
+          "auroc_ci": [
+            0.8489255833605933,
+            0.8764523147075263
+          ],
+          "aurc": 0.01754449372159622
+        },
+        "novelty": {
+          "auroc": 0.5325342537588938,
+          "auroc_ci": [
+            0.5040317667109819,
+            0.5624444090191149
+          ],
+          "aurc": 0.07437665618589615
+        },
+        "stacked": {
+          "auroc": 0.8899616349510001,
+          "auroc_ci": [
+            0.8787821355492761,
+            0.9013862903294505
+          ],
+          "aurc": 0.013681773839103612
+        },
+        "one_minus_msp": {
+          "auroc": 0.8939953139683179,
+          "auroc_ci": [
+            NaN,
+            NaN
+          ],
+          "aurc": 0.013325403326116566
+        },
+        "gini": {
+          "auroc": 0.8939953139683179,
+          "auroc_ci": [
+            NaN,
+            NaN
+          ],
+          "aurc": 0.013325403326116566
+        },
+        "single": {
+          "auroc": 0.8881680182990227,
+          "aurc": 0.014056057188447418
+        }
+      }
+    }
+  },
+  "E2_risk_control": {
+    "confidence": {
+      "0.005": {
+        "S0_risk": {
+          "mean": 0.00493,
+          "violation_share": 0.395
+        },
+        "S0_auto": {
+          "mean": 0.86509625,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.009982999999999999,
+          "violation_share": 1.0
+        },
+        "S1_auto": {
+          "mean": 0.8241409999999999,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.035598,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.867969,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.0031840425531914894,
+          "violation_share": 0.22
+        },
+        "S1_recal_auto": {
+          "mean": 0.6403255319148937,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.00335531914893617,
+          "violation_share": 0.26
+        },
+        "S2_recal_auto": {
+          "mean": 0.5728382978723404,
+          "violation_share": null
+        }
+      },
+      "0.01": {
+        "S0_risk": {
+          "mean": 0.00983875,
+          "violation_share": 0.455
+        },
+        "S0_auto": {
+          "mean": 0.9075937500000001,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.016408,
+          "violation_share": 1.0
+        },
+        "S1_auto": {
+          "mean": 0.875479,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.046484000000000004,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.9120519999999999,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.009437234042553191,
+          "violation_share": 0.42
+        },
+        "S1_recal_auto": {
+          "mean": 0.7970531914893616,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.009781914893617022,
+          "violation_share": 0.445
+        },
+        "S2_recal_auto": {
+          "mean": 0.7020872340425532,
+          "violation_share": null
+        }
+      },
+      "0.02": {
+        "S0_risk": {
+          "mean": 0.019791249999999996,
+          "violation_share": 0.445
+        },
+        "S0_auto": {
+          "mean": 0.9651137500000001,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.031126000000000004,
+          "violation_share": 1.0
+        },
+        "S1_auto": {
+          "mean": 0.9545699999999999,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.066873,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.967955,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.019006382978723403,
+          "violation_share": 0.39
+        },
+        "S1_recal_auto": {
+          "mean": 0.8857180851063831,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.019596808510638296,
+          "violation_share": 0.43
+        },
+        "S2_recal_auto": {
+          "mean": 0.7825989361702128,
+          "violation_share": null
+        }
+      }
+    },
+    "mutual_info": {
+      "0.005": {
+        "S0_risk": {
+          "mean": 0.00482125,
+          "violation_share": 0.385
+        },
+        "S0_auto": {
+          "mean": 0.8598574999999999,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.009304999999999999,
+          "violation_share": 1.0
+        },
+        "S1_auto": {
+          "mean": 0.798257,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.035355,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.8634110000000002,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.0031638297872340427,
+          "violation_share": 0.205
+        },
+        "S1_recal_auto": {
+          "mean": 0.6274670212765957,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.0034202127659574465,
+          "violation_share": 0.22
+        },
+        "S2_recal_auto": {
+          "mean": 0.5725425531914894,
+          "violation_share": null
+        }
+      },
+      "0.01": {
+        "S0_risk": {
+          "mean": 0.009734999999999999,
+          "violation_share": 0.405
+        },
+        "S0_auto": {
+          "mean": 0.90272875,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.01394,
+          "violation_share": 0.995
+        },
+        "S1_auto": {
+          "mean": 0.845113,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.04607200000000001,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.9078290000000001,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.009694680851063831,
+          "violation_share": 0.39
+        },
+        "S1_recal_auto": {
+          "mean": 0.7827212765957446,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.00977659574468085,
+          "violation_share": 0.45
+        },
+        "S2_recal_auto": {
+          "mean": 0.7006468085106383,
+          "violation_share": null
+        }
+      },
+      "0.02": {
+        "S0_risk": {
+          "mean": 0.0197975,
+          "violation_share": 0.405
+        },
+        "S0_auto": {
+          "mean": 0.9652412499999999,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.026189,
+          "violation_share": 0.985
+        },
+        "S1_auto": {
+          "mean": 0.917416,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.06709999999999999,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.971155,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.018938297872340425,
+          "violation_share": 0.39
+        },
+        "S1_recal_auto": {
+          "mean": 0.8713170212765956,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.0199,
+          "violation_share": 0.49
+        },
+        "S2_recal_auto": {
+          "mean": 0.78,
+          "violation_share": null
+        }
+      }
+    },
+    "disagreement": {
+      "0.005": {
+        "S0_risk": {
+          "mean": 0.004825,
+          "violation_share": 0.36
+        },
+        "S0_auto": {
+          "mean": 0.8137525,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.005049999999999999,
+          "violation_share": 0.505
+        },
+        "S1_auto": {
+          "mean": 0.697747,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.030066000000000002,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.8195910000000001,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.0030340425531914894,
+          "violation_share": 0.165
+        },
+        "S1_recal_auto": {
+          "mean": 0.5263840425531915,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.003252127659574468,
+          "violation_share": 0.215
+        },
+        "S2_recal_auto": {
+          "mean": 0.43278829787234036,
+          "violation_share": null
+        }
+      },
+      "0.01": {
+        "S0_risk": {
+          "mean": 0.00983125,
+          "violation_share": 0.465
+        },
+        "S0_auto": {
+          "mean": 0.8733500000000001,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.008146,
+          "violation_share": 0.145
+        },
+        "S1_auto": {
+          "mean": 0.777524,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.042249,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.874246,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.009029787234042554,
+          "violation_share": 0.3
+        },
+        "S1_recal_auto": {
+          "mean": 0.7650840425531915,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.00964255319148936,
+          "violation_share": 0.395
+        },
+        "S2_recal_auto": {
+          "mean": 0.6383468085106383,
+          "violation_share": null
+        }
+      },
+      "0.02": {
+        "S0_risk": {
+          "mean": 0.0197725,
+          "violation_share": 0.485
+        },
+        "S0_auto": {
+          "mean": 0.95075125,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.019738000000000002,
+          "violation_share": 0.56
+        },
+        "S1_auto": {
+          "mean": 0.8954089999999999,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.064043,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.948732,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.01928404255319149,
+          "violation_share": 0.41
+        },
+        "S1_recal_auto": {
+          "mean": 0.8826744680851064,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.019396808510638297,
+          "violation_share": 0.39
+        },
+        "S2_recal_auto": {
+          "mean": 0.7477010638297873,
+          "violation_share": null
+        }
+      }
+    },
+    "novelty": {
+      "0.005": {
+        "S0_risk": {
+          "mean": 0.00488375,
+          "violation_share": 0.405
+        },
+        "S0_auto": {
+          "mean": 0.26930624999999997,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.0,
+          "violation_share": 0.0
+        },
+        "S1_auto": {
+          "mean": 0.0008410000000000001,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.016665,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.271483,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.0033670212765957454,
+          "violation_share": 0.225
+        },
+        "S1_recal_auto": {
+          "mean": 0.09390000000000001,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.0032212765957446805,
+          "violation_share": 0.245
+        },
+        "S2_recal_auto": {
+          "mean": 0.055860638297872335,
+          "violation_share": null
+        }
+      },
+      "0.01": {
+        "S0_risk": {
+          "mean": 0.009785,
+          "violation_share": 0.41
+        },
+        "S0_auto": {
+          "mean": 0.454105,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.00017,
+          "violation_share": 0.0
+        },
+        "S1_auto": {
+          "mean": 0.0034029999999999993,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.029828999999999998,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.440747,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.009452127659574467,
+          "violation_share": 0.38
+        },
+        "S1_recal_auto": {
+          "mean": 0.25299680851063827,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.01006063829787234,
+          "violation_share": 0.455
+        },
+        "S2_recal_auto": {
+          "mean": 0.16883297872340428,
+          "violation_share": null
+        }
+      },
+      "0.02": {
+        "S0_risk": {
+          "mean": 0.01978875,
+          "violation_share": 0.405
+        },
+        "S0_auto": {
+          "mean": 0.7958812499999999,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.0013330000000000002,
+          "violation_share": 0.005
+        },
+        "S1_auto": {
+          "mean": 0.039775,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.057953000000000005,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.776828,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.019411702127659573,
+          "violation_share": 0.38
+        },
+        "S1_recal_auto": {
+          "mean": 0.45997978723404254,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.019338297872340423,
+          "violation_share": 0.435
+        },
+        "S2_recal_auto": {
+          "mean": 0.3035702127659574,
+          "violation_share": null
+        }
+      }
+    },
+    "stacked": {
+      "0.005": {
+        "S0_risk": {
+          "mean": 0.0049175,
+          "violation_share": 0.42
+        },
+        "S0_auto": {
+          "mean": 0.85477125,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.005771999999999999,
+          "violation_share": 0.785
+        },
+        "S1_auto": {
+          "mean": 0.7819319999999998,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.033531000000000005,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.856907,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.0031797872340425526,
+          "violation_share": 0.205
+        },
+        "S1_recal_auto": {
+          "mean": 0.6425797872340425,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.003475531914893617,
+          "violation_share": 0.26
+        },
+        "S2_recal_auto": {
+          "mean": 0.5732840425531915,
+          "violation_share": null
+        }
+      },
+      "0.01": {
+        "S0_risk": {
+          "mean": 0.00968625,
+          "violation_share": 0.41
+        },
+        "S0_auto": {
+          "mean": 0.89685125,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.009343,
+          "violation_share": 0.275
+        },
+        "S1_auto": {
+          "mean": 0.8300280000000001,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.042873999999999995,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.894907,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.009161702127659575,
+          "violation_share": 0.375
+        },
+        "S1_recal_auto": {
+          "mean": 0.8117776595744681,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.009951063829787235,
+          "violation_share": 0.425
+        },
+        "S2_recal_auto": {
+          "mean": 0.6984670212765957,
+          "violation_share": null
+        }
+      },
+      "0.02": {
+        "S0_risk": {
+          "mean": 0.01972,
+          "violation_share": 0.465
+        },
+        "S0_auto": {
+          "mean": 0.9603199999999998,
+          "violation_share": null
+        },
+        "S1_risk": {
+          "mean": 0.017826999999999996,
+          "violation_share": 0.155
+        },
+        "S1_auto": {
+          "mean": 0.902757,
+          "violation_share": null
+        },
+        "S2_risk": {
+          "mean": 0.064824,
+          "violation_share": 1.0
+        },
+        "S2_auto": {
+          "mean": 0.9583750000000001,
+          "violation_share": null
+        },
+        "S1_recal_risk": {
+          "mean": 0.0194,
+          "violation_share": 0.48
+        },
+        "S1_recal_auto": {
+          "mean": 0.9035351063829786,
+          "violation_share": null
+        },
+        "S2_recal_risk": {
+          "mean": 0.01911276595744681,
+          "violation_share": 0.39
+        },
+        "S2_recal_auto": {
+          "mean": 0.774209574468085,
+          "violation_share": null
+        }
+      }
+    }
+  },
+  "E3_budget": {
+    "budgets": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.4,
+      0.5
+    ],
+    "results": {
+      "S0": {
+        "cost_no_verification": 1798.0,
+        "curves": {
+          "random": [
+            1.0,
+            0.9404894327030033,
+            0.8971078976640712,
+            0.8676307007786429,
+            0.8092324805339266,
+            0.7419354838709677,
+            0.6195773081201335,
+            0.5116796440489433
+          ],
+          "confidence": [
+            1.0,
+            0.5934371523915462,
+            0.3175750834260289,
+            0.13904338153503892,
+            0.060066740823136816,
+            0.006117908787541713,
+            0.0,
+            0.0
+          ],
+          "stacked": [
+            1.0,
+            0.6218020022246941,
+            0.3609566184649611,
+            0.15294771968854282,
+            0.06451612903225806,
+            0.0055617352614015575,
+            0.0,
+            0.0
+          ],
+          "expected_cost": [
+            1.0,
+            0.44938820912124583,
+            0.18242491657397109,
+            0.09899888765294772,
+            0.06395995550611791,
+            0.017797552836484983,
+            0.017241379310344827,
+            0.006117908787541713
+          ]
+        }
+      },
+      "S1": {
+        "cost_no_verification": 2290.0,
+        "curves": {
+          "random": [
+            1.0,
+            0.9611353711790394,
+            0.9253275109170306,
+            0.879475982532751,
+            0.8296943231441049,
+            0.7205240174672489,
+            0.6074235807860262,
+            0.5126637554585153
+          ],
+          "confidence": [
+            1.0,
+            0.6672489082969433,
+            0.45414847161572053,
+            0.27379912663755457,
+            0.17510917030567685,
+            0.07423580786026202,
+            0.026200873362445413,
+            0.004366812227074236
+          ],
+          "stacked": [
+            1.0,
+            0.5995633187772926,
+            0.3803493449781659,
+            0.27729257641921395,
+            0.15021834061135372,
+            0.0611353711790393,
+            0.03056768558951965,
+            0.008733624454148471
+          ],
+          "expected_cost": [
+            1.0,
+            0.5065502183406113,
+            0.27510917030567683,
+            0.17292576419213973,
+            0.11790393013100436,
+            0.0611353711790393,
+            0.048034934497816595,
+            0.039301310043668124
+          ]
+        }
+      },
+      "S2": {
+        "cost_no_verification": 3935.0,
+        "curves": {
+          "random": [
+            1.0,
+            0.97712833545108,
+            0.9260482846251589,
+            0.8650571791613723,
+            0.8106734434561627,
+            0.7158831003811944,
+            0.609148665819568,
+            0.5176620076238881
+          ],
+          "confidence": [
+            1.0,
+            0.7524777636594663,
+            0.5418043202033037,
+            0.4043202033036849,
+            0.2770012706480305,
+            0.10165184243964422,
+            0.030495552731893267,
+            0.012706480304955527
+          ],
+          "stacked": [
+            1.0,
+            0.7997458703939009,
+            0.5672172808132148,
+            0.409148665819568,
+            0.2846251588310038,
+            0.12198221092757307,
+            0.03303684879288437,
+            0.010165184243964422
+          ],
+          "expected_cost": [
+            1.0,
+            0.6035578144853876,
+            0.36213468869123255,
+            0.24193138500635325,
+            0.1565438373570521,
+            0.13468869123252858,
+            0.11944091486658195,
+            0.10673443456162643
+          ]
+        }
+      }
+    }
+  },
+  "E4_non_functional": {
+    "qhat": 0.12988636949032006,
+    "S0": {
+      "coverage": 0.9051666666666667,
+      "mean_width": 3.856192590916494,
+      "spearman_unc_width": 0.4560241741319255,
+      "spearman_unc_margin": -0.6408402978304176,
+      "coverage_top_decile_unc": 0.92
+    },
+    "S1": {
+      "coverage": 0.8494,
+      "mean_width": 3.266082679728842,
+      "spearman_unc_width": -0.5329649742540662,
+      "spearman_unc_margin": -0.5264237546652056,
+      "coverage_top_decile_unc": 0.864
+    },
+    "S2": {
+      "coverage": 0.8368,
+      "mean_width": 3.857732456217728,
+      "spearman_unc_width": 0.46361365976300334,
+      "spearman_unc_margin": -0.6356484516376725,
+      "coverage_top_decile_unc": 0.936
+    }
+  },
+  "E5_aleatoric": {
+    "share_flaky": 0.062,
+    "bayes_error": 0.012333333333333333,
+    "spearman_aleatoric_true_entropy": -0.06566682738483369,
+    "spearman_mi_true_entropy": -0.06675435013834352,
+    "auroc_aleatoric_flaky": 0.9206807743158248,
+    "auroc_mi_flaky": 0.9132448357291881,
+    "mean_mi_ratio_S1_S0": 1.9094651670340206,
+    "mean_mi_ratio_S2_S0": 0.9042330981318204
+  },
+  "E6_audit": {
+    "nominal_error": 0.04766666666666667,
+    "power": {
+      "100": {
+        "detect_S2": 0.4645,
+        "false_alarm_S0": 0.045
+      },
+      "200": {
+        "detect_S2": 0.6105,
+        "false_alarm_S0": 0.035
+      },
+      "400": {
+        "detect_S2": 0.898,
+        "false_alarm_S0": 0.048
+      },
+      "800": {
+        "detect_S2": 0.997,
+        "false_alarm_S0": 0.0275
+      }
+    }
+  },
+  "runtime_s": 37.1
+}
