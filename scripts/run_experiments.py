@@ -1,6 +1,6 @@
 """Run every experiment of the study and write results, figures and report numbers.
 
-Usage:  python scripts/run_experiments.py   (about 3 minutes on 2 CPU cores)
+Usage:  python scripts/run_experiments.py   (about 40 seconds on 2 CPU cores)
 """
 from __future__ import annotations
 
