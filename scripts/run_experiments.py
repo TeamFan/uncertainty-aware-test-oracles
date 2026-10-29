@@ -261,7 +261,7 @@ plt.rcParams.update({"font.size": 9, "axes.spines.top": False, "axes.spines.righ
 COL = {"confidence": "#1b6f8a", "mutual_info": "#c1662b", "disagreement": "#6a8f3a", "novelty": "#8a6fb0",
        "stacked": "#222222", "random": "#9a9a9a", "expected_cost": "#b8333a"}
 
-fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.75), sharey=True)
+fig, axes = plt.subplots(1, 3, figsize=(7.2, 2.95), sharey=True)
 for ax, name in zip(axes, ["S0", "S1", "S2"]):
     s, y = SC[name], SETS[name][1]["fail"]
     err = (s["p"] > 0.5) != y
@@ -274,8 +274,8 @@ for ax, name in zip(axes, ["S0", "S1", "S2"]):
 axes[0].set_ylabel("error rate among accepted")
 axes[0].set_ylim(0, 0.1)
 handles, labs = axes[0].get_legend_handles_labels()
-fig.legend(handles, labs, fontsize=6.5, frameon=False, loc="lower center", ncol=5)
-fig.tight_layout(rect=(0, 0.08, 1, 1))
+fig.legend(handles, labs, fontsize=6.5, frameon=False, loc="lower center", ncol=3)
+fig.tight_layout(rect=(0, 0.13, 1, 1))
 fig.savefig(FIG / "risk_coverage.pdf")
 plt.close(fig)
 

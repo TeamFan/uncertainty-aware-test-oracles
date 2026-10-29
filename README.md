@@ -31,7 +31,8 @@ the question as a risk-controlled decision:
 * **Test cases:** 11 parameters (lead braking or cut-in, speeds, gap, braking
   onset and strength, friction, sensor noise, latency, dropout). Requirement:
   minimum gap ≥ 2 m. The other road user varies between executions, so 6.2 % of
-  nominal test cases are flaky.
+  nominal test cases are flaky
+  (estimated irreducible classification error 1.2 %).
 * **Shifts:** S1 = wet/snowy roads and slower sensing (ODD shift);
   S2 = software update of the controller (shorter headway, later AEB) on the
   same test distribution.
@@ -40,8 +41,9 @@ the question as a risk-controlled decision:
 * **Scores:** confidence (entropy of the ensemble mean), ensemble mutual
   information, cross-family disagreement, input novelty (kNN), and a stacked
   logistic error predictor fitted on a separate set.
-* **Acceptance:** conformal risk control (Angelopoulos et al., ICLR 2024) of
-  false passes per test case at α = 1 %; budgeted re-execution by calibrated
+* **Acceptance:** conformal risk control (Angelopoulos et al., ICLR 2024) of the
+  expected number of accepted false passes per test case at α = 1 %
+  (a marginal guarantee under exchangeability); budgeted re-execution by estimated
   expected cost (false pass 10, false fail 1); random audit with a binomial
   test after a software update.
 
@@ -60,10 +62,12 @@ the question as a risk-controlled decision:
 * For binary verdicts, maximum softmax probability, entropy, Gini impurity and
   margin are strictly decreasing in |p − 1/2| and rank test cases identically
   (proved in the report, checked in the tests).
-* After the software update no uncertainty score sees the change: the oracle's
-  uncertainty describes its inputs, not the system that produced the labels. A
-  random audit of 400 executions detects the update with 90 % power
-  (4.8 % false alarms on the unchanged system).
+* After the software update, all five acceptance rules calibrated on the nominal
+  domain exceed the 1 % target (2.98–4.65 % false passes per test case), although
+  the scores still rank errors well (AUROC up to 0.894): a frozen oracle scoring
+  unchanged inputs cannot see a change of the system that produced the labels.
+  A random audit of 400 executions detects the update with an estimated 90 %
+  power (4.8 % false alarms on the unchanged system).
 * Re-executing the 20 % of verdicts with the highest calibrated expected cost
   removes 94 % of the misjudgement cost on S0 and 88 % on S1
   (random selection: 19 % and 17 %).
